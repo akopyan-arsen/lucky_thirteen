@@ -1,0 +1,124 @@
+.swiper-container {
+}
+
+.projects-title {
+  margin-bottom: 32px;
+  opacity: 0.4;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+
+.swiper-wrapper {
+  /* position: relative; */
+  min-width: 320px;
+  height: 868px;
+}
+
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.slide-details {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 32px 32px 32px;
+  flex-grow: 1;
+  border-radius: 24px 24px 0 0;
+  background-color: #fafafa;
+}
+
+.tags-container {
+  color: #1c1d20;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 96px;
+}
+
+.tag {
+  border-radius: 60px;
+  border: 1px solid rgba(28, 29, 32, 0.2);
+  padding: 13px 18px 13px 18px;
+}
+
+.slide-description {
+  color: #1c1d20;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: -0.03em;
+  text-align: left;
+  margin-bottom: 32px;
+}
+
+.see-project-button {
+  padding: 13px 32px 13px 32px;
+  border-radius: 60px;
+  border: 0;
+  background-color: #ed3b44;
+  width: 143px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.36px;
+  letter-spacing: -0.02em;
+  transition: background-color 0.3s;
+}
+
+.see-project-button:hover {
+  background-color: #e0373f;
+}
+
+.slide-image-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: #242527;
+  border-radius: 0 0 24px 24px;
+  padding: 100px 16px 100px 16px;
+}
+
+.swiper-buttons {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.swiper-button-p {
+  width: 52px;
+  height: 52px;
+  padding: 14px;
+  border-radius: 50%;
+  border: 1px solid #fafafa33;
+  background-color: transparent;
+}
+
+.swiper-button-n {
+  width: 52px;
+  height: 52px;
+  padding: 14px;
+  border-radius: 50%;
+  border: 1px solid #fafafa80;
+  background-color: transparent;
+}
+
+.previous-button-icon {
+  fill: transparent;
+  stroke: #3b3b3b;
+}
+
+.next-button-icon {
+  fill: transparent;
+  stroke: #fafafa;
+}
+
+.swiper-button-prev::after {
+}
+
+.swiper-button-next::after {
+}
