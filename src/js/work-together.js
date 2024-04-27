@@ -40,7 +40,8 @@ async function handleSubmit(event) {
     console.log(title);
 
     const instance = basicLightbox.create(
-      `<div class="modal">
+      `<div class="backdrop">
+      <div class="modal">
       <button class="modal-btn" type="button" aria-label="Modal close button">
           <svg class="modal-icon-x" width="22px" height="22">
             <use href="../img/icons.svg#icon-x"></use>
@@ -49,11 +50,20 @@ async function handleSubmit(event) {
 
       <h3 class="modal-title">${title}</h1>
       <p class="modal-desc">${message}</p>
+      </div>
       </div>`,
 
       {
         onShow: instance => {
           instance.element().querySelector('.modal-btn').onclick = instance.close;
+          instance.element().querySelector('.backdrop').onclick = instance.close;
+
+          window.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+              instance.close();
+            }
+          });
+
         },
       }
     );
