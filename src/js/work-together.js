@@ -2,7 +2,13 @@ import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 import * as basicLightbox from 'basiclightbox';
 
-import { fetchData, BASE_URL, params, updateCommnetValue, updateEmailValue } from './api';
+import {
+  fetchData,
+  BASE_URL,
+  params,
+  updateCommnetValue,
+  updateEmailValue,
+} from './api';
 
 const searchForm = document.querySelector('.feedback-form');
 // const sendBtn = document.querySelector('.feedback-form[buttom]');
@@ -55,15 +61,20 @@ async function handleSubmit(event) {
 
       {
         onShow: instance => {
-          instance.element().querySelector('.modal-btn').onclick = instance.close;
-          instance.element().querySelector('.backdrop').onclick = instance.close;
+          instance.element().querySelector('.modal-btn').onclick =
+            instance.close;
 
-          window.addEventListener('keydown', function(event) {
-            if (event.key === "Escape") {
+          instance.element().addEventListener('click', function (event) {
+            if (event.target.classList.contains('backdrop')) {
               instance.close();
             }
           });
 
+          window.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+              instance.close();
+            }
+          });
         },
       }
     );
@@ -73,10 +84,10 @@ async function handleSubmit(event) {
   } catch (error) {
     // alert(error);
     iziToast.show({
-            message:
-              'Please ented a valid data!',
-            color: 'orange',
-            position: 'topRight',
-          });
-  } finally {}
+      message: 'Please ented a valid data!',
+      color: 'orange',
+      position: 'topRight',
+    });
+  } finally {
+  }
 }
