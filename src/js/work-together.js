@@ -1,5 +1,5 @@
-// import iziToast from 'izitoast';
-// import 'izitoast/dist/css/iziToast.min.css';
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 import * as basicLightbox from 'basiclightbox';
 
 import { fetchData, BASE_URL, params, updateCommnetValue, updateEmailValue } from './api';
@@ -52,10 +52,15 @@ async function handleSubmit(event) {
       }
     );
     instance.show();
-    
-  } catch (error) {
-    alert(error);
-  } finally {
+
     searchForm.reset();
-  }
+  } catch (error) {
+    // alert(error);
+    iziToast.show({
+            message:
+              'Please ented a valid data!',
+            color: 'orange',
+            position: 'topRight',
+          });
+  } finally {}
 }
