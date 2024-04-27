@@ -105,6 +105,8 @@ a {
 
   border-bottom: 1px solid rgba(250, 250, 250, 0.2);
   outline: none;
+
+  text-overflow: ellipsis;
 }
 @media only screen and (min-width: 768px) {
   .footer-email,
