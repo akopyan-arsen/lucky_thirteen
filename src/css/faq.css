@@ -58,3 +58,37 @@ padding: 0;
   letter-spacing: -0.32px;
   /* удалить */
 }
+
+@media screen and (min-width: 768px) {
+    .faq-section {
+        /* Удалить */
+        margin-bottom: 96px;
+        margin-top: 96px;
+        margin-left: 32px;
+        margin-right: 32px;
+        /* Удалить */
+      }
+      
+      .faq-tab {
+        padding-top: 32px;
+        padding-bottom: 24px;
+      }
+      
+      .faq-tab-title {
+        margin-bottom: 26px;
+      }
+  }
+
+@media screen and (min-width: 1280px) {
+    .faq-section {
+        /* Удалить */
+        margin-bottom: 164px;
+        margin-top: 164px;
+        /* Удалить */
+      }
+
+      .faq-tab {
+        padding-top: 32px;
+        padding-bottom: 26px;
+      }
+}
