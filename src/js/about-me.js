@@ -2,7 +2,7 @@ import initAccordion from './Libraries/accordion';
 import initSwiper from './Libraries/swiper';
 
 const buildAboutMe = () => {
-  initAccordion('.accordion-container.about-me', {
+  initAccordion('.accordion-about-me .accordion-container', {
     openOnInit: [0],
   });
   initSwiper('.about-me-swiper .swiper', {
