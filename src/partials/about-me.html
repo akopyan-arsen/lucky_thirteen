@@ -1,41 +1,43 @@
 <section class="section about-me">
   <div class="container">
-    <div>
-      <h3>
-        I work with people all over the world to create impressive and
-        functional websites that reflect each client's unique personality.
-      </h3>
-      <picture>
-        <picture>
-          <source
-            srcset="
-              ./img/about_me/desktop/desktop.jpg   1x,
-              ./img/about_me/desktop/desktop2x.jpg 2x
-            "
-            media="(min-width: 1280px)"
-          />
-          <source
-            srcset="
-              ./img/about_me/tablet/tablet.jpg   1x,
-              ./img/about_me/tablet/tablet2x.jpg 2x
-            "
-            media="(min-width: 768px)"
-          />
-          <source
-            srcset="
-              ./img/about_me/phone/phone.jpg   1x,
-              ./img/about_me/phone/phone2x.jpg 2x
-            "
-            media="(min-width: 320px)"
-          />
-          <img
-            class="ouryachts-img"
-            src="./img/about_me/phone/phone.jpg"
-            alt="My photo"
-            width="343"
-            height="500"
-          />
-        </picture>
+    <h2 class="visually-hidden">About Me</h2>
+    <div class="about-me-main-info">
+      <div class="main-info-place">
+        <h3>
+          I work with people all over the world to create impressive and
+          <span class="span-red">functional</span>
+          <span class="span-gray">websites</span> that reflect each client's
+          unique personality.
+        </h3>
+      </div>
+      <picture class="about-me-main-picture">
+        <source
+          srcset="
+            ./img/about_me/desktop/desktop.jpg   1x,
+            ./img/about_me/desktop/desktop2x.jpg 2x
+          "
+          media="(min-width: 1280px)"
+        />
+        <source
+          srcset="
+            ./img/about_me/tablet/tablet.jpg   1x,
+            ./img/about_me/tablet/tablet2x.jpg 2x
+          "
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="
+            ./img/about_me/phone/phone.jpg   1x,
+            ./img/about_me/phone/phone2x.jpg 2x
+          "
+          media="(min-width: 320px)"
+        />
+        <img
+          src="./img/about_me/phone/phone.jpg"
+          alt="My photo"
+          width="343"
+          height="500"
+        />
       </picture>
     </div>
 
