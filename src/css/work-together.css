@@ -223,6 +223,11 @@ a {
   align-items: center;
   gap: 16px;
 }
+@media only screen and (min-width: 768px) {
+    .modal {
+      width: 492px;
+    }
+  }
 
 .modal-title {
   text-align: center;
