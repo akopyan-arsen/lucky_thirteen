@@ -91,4 +91,13 @@ padding: 0;
         padding-top: 32px;
         padding-bottom: 26px;
       }
+
+      .faq-divide-container {
+        display: flex;
+      }
+    
+      .faq-divide-container > li {
+        width: 50%;
+      }
+    
 }
