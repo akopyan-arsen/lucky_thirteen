@@ -12,6 +12,7 @@ const buildAboutMe = () => {
     navigation: {
       nextEl: '.about-me-swiper .button-next',
     },
+    speed: 600,
     spaceBetween: 0,
     breakpoints: {
       320: {
