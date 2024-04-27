@@ -21,7 +21,7 @@ const buildAboutMe = () => {
       768: {
         slidesPerView: 3,
       },
-      1280: {
+      1440: {
         slidesPerView: 6,
       },
     },

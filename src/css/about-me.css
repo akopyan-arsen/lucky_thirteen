@@ -1,8 +1,14 @@
+.about-me-main-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
 .about-me-main-info .main-info-place{
     display: flex;
     justify-content: center;
     gap: 16px;
-    margin-bottom: 16px;
     width: 100%;
     min-height: 500px;
     background-color: #242527;
@@ -31,7 +37,6 @@
 .about-me-main-picture img{
     width: 100%;
     border-radius: 24px;
-    margin-bottom: 32px;
 }
 
 .accordion-about-me .ac {
@@ -78,9 +83,19 @@
     padding-top: 22px;
 }
 
+.accordion-about-me .ac .ac-panel ul {
+    padding-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.accordion-about-me .ac:first-of-type .ac-panel ul {
+    gap: 32px;
+}
+
 .accordion-about-me .ac .ac-panel .ac-text{
     padding: 0;
-    padding-top: 24px;
     color: inherit;
     font-family: inherit;
 
@@ -88,6 +103,7 @@
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: -0.02em;
+    text-align: start;
 }
 
 .about-me-swiper{
@@ -130,6 +146,10 @@
 }
 
 @media screen and (min-width: 768px) {
+    .about-me-main-info {
+        margin-bottom: 64px;
+    }
+
     .about-me-main-info .main-info-place {
         padding-top: 64px;
         min-height: 700px;
@@ -143,11 +163,6 @@
         max-width: 576px;
     }
 
-    .about-me-main-picture source,
-    .about-me-main-picture img {
-        margin-bottom: 64px;
-    }
-
     .accordion-about-me .accordion-underline {
         padding-top: 48px;
         margin-bottom: 32px;
@@ -159,6 +174,10 @@
 
     .accordion-about-me .ac .ac-header .ac-trigger::after {
         right: 4%;
+    }
+
+    .accordion-about-me .ac:first-of-type .ac-panel ul {
+        gap: 16px;
     }
 
     .about-me-swiper {
@@ -181,5 +200,35 @@
     }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1440px) {
+    .about-me-main-info {
+        flex-direction: row;
+        margin-bottom: 96px;
+    }
+
+    .about-me-main-info .main-info-place {
+        max-width: 680px;
+    }
+
+    .about-me-main-info .main-info-place h3 {
+        max-width: 552px;
+    }
+
+    .accordion-about-me .ac .ac-header .ac-trigger::after {
+        right: 2%;
+    }
+
+    .accordion-about-me .ac .ac-panel .ac-text {
+        margin-left: 696px;
+        max-width: 612px;
+    }
+
+    .accordion-about-me .ac:first-of-type .ac-panel ul {
+        gap: 32px;
+    }
+
+    .about-me-swiper {
+        gap: 72px;
+        padding-top: 48px
+    }
 }
