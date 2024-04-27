@@ -2,7 +2,7 @@
 // import 'izitoast/dist/css/iziToast.min.css';
 import * as basicLightbox from 'basiclightbox';
 
-import { fetchData, BASE_URL, params } from './api';
+import { fetchData, BASE_URL, params, updateCommnetValue, updateEmailValue } from './api';
 
 const searchForm = document.querySelector('.feedback-form');
 // const sendBtn = document.querySelector('.feedback-form[buttom]');
@@ -30,6 +30,9 @@ async function handleSubmit(event) {
   // gallery.innerHTML = '';
   // loader.classList.remove('is-hidden');
 
+  updateCommnetValue(commentsValue);
+  updateEmailValue(emailValue);
+
   try {
     const {
       data: { message, title },
@@ -52,5 +55,7 @@ async function handleSubmit(event) {
     
   } catch (error) {
     alert(error);
-  } finally {}
+  } finally {
+    searchForm.reset();
+  }
 }

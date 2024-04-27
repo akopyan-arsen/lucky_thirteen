@@ -11,9 +11,18 @@ async function fetchData(url, body = {}) {
   return await axios.post(url, body);
 }
 
+function updateEmailValue(email) {
+    params.email = email;
+  }
+  
+  function updateCommnetValue(comment) {
+    params.comment = comment;
+  }
 
 export {
   fetchData,
   BASE_URL,
-  params
+  params,
+  updateCommnetValue,
+  updateEmailValue
 };
