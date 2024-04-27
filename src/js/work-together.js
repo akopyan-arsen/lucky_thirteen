@@ -38,8 +38,8 @@ async function handleSubmit(event) {
 
     const instance = basicLightbox.create(
       `<div class="modal">
-      <h3 class="modal-title">Dynamic Content</h1>
-      <p class="modal-desc">You can set the content of the lightbox with JS.</p>
+      <h3 class="modal-title">${title}</h1>
+      <p class="modal-desc">${message}</p>
       </div>`,
 
       {
