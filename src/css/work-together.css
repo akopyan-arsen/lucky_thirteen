@@ -58,6 +58,11 @@ a {
     text-transform: uppercase;
   }
 }
+@media only screen and (min-width: 1440px) {
+    .footer-descr.together {
+        width: 100%;
+    }
+  }
 .feedback-form {
   padding: 32px 0;
 }
@@ -69,15 +74,15 @@ a {
 }
 @media only screen and (min-width: 768px) {
   .input-container {
-    max-width: 245px;
+    /* max-width: 245px; */
     flex-wrap: nowrap;
     gap: 32px;
   }
 }
 @media only screen and (min-width: 1440px) {
   .input-container {
-    max-width: 390px;
-    gap: 32px;
+    /* max-width: 390px; */
+    /* gap: 32px; */
   }
 }
 
@@ -109,7 +114,7 @@ a {
 
   .feedback-form {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     gap: 16px;
   }
@@ -121,9 +126,6 @@ a {
   }
 
   .feedback-form {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     gap: 86px;
   }
 }
