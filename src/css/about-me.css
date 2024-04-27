@@ -7,6 +7,8 @@
     color: inherit;
     font-family: inherit;
     color: rgba(250, 250, 250, 0.40);
+    padding: 0;
+    
 }
 
 .accordion-about-me .ac .ac-header .ac-trigger::after {
@@ -19,6 +21,12 @@
     content: url('../img/about_me/css_icons/arrow_down.svg');
     width: 10px;
     height: 10px;
+}
+
+.accordion-about-me .accordion-underline {
+    width: 100%;
+    padding-top: 32px;
+    border-bottom: 1px solid rgba(250, 250, 250, 0.20);
 }
 
 .accordion-about-me .ac .ac-panel .ac-text{
