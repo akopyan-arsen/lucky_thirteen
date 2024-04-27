@@ -4,21 +4,20 @@
     align-items: center;
     width: 100%;
     height: 100%;
-    padding: 0 32px;
-    gap: 72px;
+    gap: 55px;
+    padding-top: 32px
 }
 
 .about-me-swiper .swiper{
     width: 100%;
-    display: block;
 }
 
 .about-me-swiper .swiper .swiper-slide{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
-    height: 200px;
+    width: 130px;
+    height: 130px;
     border: 1px solid rgba(250, 250, 250, 0.20);
     border-radius: 50%;
 }
@@ -28,5 +27,7 @@
 }
 
 .about-me-swiper .button-next {
-
+    width: 28px;
+    height: 28px;
+    stroke: #3B3B3B;
 }
