@@ -84,6 +84,7 @@ input {
     padding: 0 32px;
   }
 }
+
 @media screen and (min-width: 1440px) {
   .section {
     margin-bottom: 164px;
