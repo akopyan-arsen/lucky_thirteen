@@ -7,7 +7,7 @@
       <!-- Additional required wrapper -->
       <div class="swiper-wrapper">
         <!-- Slides -->
-        <ul class="swiper-slide">
+        <ul id="swiper-slide-container" class="swiper-slide">
           <li class="slide-details">
             <div class="tags-container">
               <div class="tag">#react</div>
@@ -16,7 +16,8 @@
               <div class="tag">#git</div>
             </div>
             <p class="slide-description">
-              Programming Across Borders: Ideas,<br />
+              Programming Across <br />
+              Borders: Ideas,<br />
               Technologies, Innovations
             </p>
             <button class="see-project-button">See project</button>
@@ -40,16 +41,16 @@
       </div>
       <div class="swiper-buttons">
         <!-- If we need navigation buttons -->
-        <button class="swiper-button-p">
-          <svg width="24" height="24" class="previous-button-icon">
-            <use href="../img/icons.svg#icon-arrow-narrow-left"></use>
-          </svg>
-        </button>
-        <button class="swiper-button-n">
-          <svg width="24" height="24" class="next-button-icon">
-            <use href="../img/icons.svg#icon-arrow-narrow-right"></use>
-          </svg>
-        </button>
+        <!-- <button id="swiper-button-p" class="swiper-button-p"> -->
+        <svg width="24" height="24" class="swiper-button-prev">
+          <use href="../img/icons.svg#icon-arrow-narrow-left"></use>
+        </svg>
+        <!-- </button> -->
+        <!-- <button id="swiper-button-n" class="swiper-button-n"> -->
+        <svg width="24" height="24" class="swiper-button-next">
+          <use href="../img/icons.svg#icon-arrow-narrow-right"></use>
+        </svg>
+        <!-- </button> -->
       </div>
     </div>
   </div>
