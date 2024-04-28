@@ -7,6 +7,14 @@ a {
 
 .work-together {
   padding-bottom: 32px;
+  background-image: url(../img/footer-background.png);
+  background-position: right;
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
+}
+@media only screen and (min-width: 768px) {
+  .work-together {
+  }
 }
 
 .footer-container {
