@@ -45,16 +45,6 @@
 
 .faq-tab-title {
   margin-bottom: 16px;
-
-  /* Видалити */
-  color: #fafafa;
-  font-family: 'Inter Tight';
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 30px; /* 150% */
-  letter-spacing: -0.4px;
-  /* Видалити */
 }
 
 .faq-tab-content {
@@ -67,6 +57,45 @@
   line-height: 24px; /* 150% */
   letter-spacing: -0.32px;
   /* Видалити */
+}
+
+.faq-inner-container .ac {
+  background-color: inherit;
+  border: none;
+  margin: 0;
+}
+
+.faq-inner-container .ac .ac-panel .ac-text {
+  color: inherit;
+  font-family: inherit;
+  padding: 0;
+  padding-top: 16px;
+}
+
+.faq-inner-container .ac .ac-trigger {
+  color: inherit;
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  max-width: 264px;
+  padding: 0;
+  padding-top: 20px;
+}
+
+.faq-inner-container .ac .ac-header .ac-trigger::after {
+  top: 30px;
+  right: -20%;
+  content: url('../img/about_me/css_icons/arrow_down.svg');
+  width: 10px;
+  height: 10px;
+}
+
+.faq-inner-container .ac.is-active .ac-header .ac-trigger::after {
+  content: url('../img/about_me/css_icons/arrow_top.svg');
+  width: 10px;
+  height: 10px;
 }
 
 @media screen and (min-width: 768px) {
