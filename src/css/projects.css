@@ -12,9 +12,12 @@
   min-width: 320px;
   height: 868px;
 }
-/* 
-#swiper-slide-container {
-} */
+
+.swiper-slide .swiper-slide-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 
 .slide-details {
   display: flex;
