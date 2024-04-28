@@ -7,8 +7,8 @@ import 'izitoast/dist/css/iziToast.min.css';
 const swiper = new Swiper('.swiper', {
   direction: 'horizontal',
   speed: 400,
-  slidesPerView: 4,
   spaceBetween: 16,
+  slidesPerView: 4,
 
   navigation: {
     nextEl: '.right-arrow',
