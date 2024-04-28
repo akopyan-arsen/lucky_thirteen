@@ -32,43 +32,64 @@ const swiper = new Swiper('.swiper', {
 });
 
 const reviewsContainer = document.querySelector('.swiper-wrapper');
+const textError = document.querySelector('.no-content-warning');
+const navigationBtn = document.querySelector('.nav');
 
 fetchData();
 
+textError.hidden = true;
+let currentSlide = 0;
+let totalSlides;
+
 function createMarkup(arr) {
-  const items = arr.map(({ author, avatar_url, review }) => {
-    return `
+  if (arr.length === 0) {
+    textError.hidden = false;
+    reviewsContainer.hidden = true;
+    navigationBtn.disabled = true;
+  } else {
+    const items = arr.map(({ author, avatar_url, review }) => {
+      return `
       <li class="swiper-slide" id="card">
         <img class="review-icon" src="${avatar_url}" />
         <h3 class="item-name">${author}</h3>
         <p class="item-comment">${review}</p>
       </li>
     `;
-  });
+    });
 
-  const markup = items.join('');
-  reviewsContainer.insertAdjacentHTML('beforeend', markup);
+    const markup = items.join('');
+    reviewsContainer.insertAdjacentHTML('beforeend', markup);
+  }
 }
 
-function fetchData() {
-  return fetch('https://portfolio-js.b.goit.study/api/reviews').then(
-    response => {
-      if (!response.ok) {
-        throw new Error('Error');
-      }
-      return response.json();
-    }
-  );
+async function fetchData() {
+  try {
+    const response = await fetch(
+      'https://portfolio-js.b.goit.study/api/reviews'
+    );
+
+    const data = await response.json();
+    totalSlides = data.length;
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 fetchData()
-  .then(data => {
-    if (data.length === 0) {
-      throw new Error('Not found');
-    } else {
-      createMarkup(data);
-    }
-  })
+  .then(data => createMarkup(data))
   .catch(error => {
-    console.error('Error fetching data:', error);
+    console.log(error);
+    textError.hidden = false;
+    reviewsContainer.hidden = true;
+    navigationBtn.disabled = true;
+    onSlideChange();
   });
+
+function onSlideChange() {
+  if (currentSlide === totalSlides - 1) {
+    navigationBtn.classList.add('disabled');
+  } else {
+    navigationBtn.classList.remove('disabled');
+  }
+}
