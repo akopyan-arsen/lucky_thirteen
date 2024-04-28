@@ -15,42 +15,58 @@
     <script type="module" crossorigin src="/lucky_thirteen/commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="/lucky_thirteen/assets/vendor-6dcf4018.js">
     <link rel="stylesheet" href="/lucky_thirteen/assets/vendor-aff52511.css">
-    <link rel="stylesheet" href="/lucky_thirteen/assets/index-a816761a.css">
+    <link rel="stylesheet" href="/lucky_thirteen/assets/index-10ad3068.css">
   </head>
   <body>
     <main>
       <section class="section hero">
   <div class="container wrapper">
     <header class="header">
-  <ul class="nav">
-    <li class="logo">
-      <a href="./index.html" class="header-logo">
-        <img
-          class="logo-img"
-          srcset="/lucky_thirteen/assets/logo-f3a4eff0.png 1x, /lucky_thirteen/assets/logo@2x-45c929a9.png 2x"
-          src="./img/hero/girl1-mob@1x.png"
-          alt="logo"
-          width="80"
-          height="80"
-        />
-
-        <svg class="logo-text">
-          <use href="/lucky_thirteen/assets/icons-2234978e.svg#icon-jefferson"></use>
-        </svg>
-      </a>
-    </li>
-    <li class="menu">Menu</li>
-
-    <li>
-      <button class="burger-btn" type="button" aria-label="Open menu button">
-        <svg class="burger-btn-icon" width="28" height="28">
-          <use href="/lucky_thirteen/assets/icons-2234978e.svg#icon-burger"></use>
-        </svg>
-      </button>
-      <a href="#work-together" class="order-btn">Order the project</a>
-    </li>
-  </ul>
+    <div class="container">
+        <div class="desktop-menu">
+            <div class="logo">
+                <img src="../img/header/logo.png" alt="Logo">
+                <span>jefferson*</span>
+            </div>
+            <div class="menu-container">
+                <a class="menu-toggle">Menu</a>
+                <div class="dropdown-menu">
+                    <a href="#about-me">About me</a>
+                    <a href="#benefits">Benefits</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#faq">FAQ</a>
+                </div>
+            </div>
+            <a href="#work-together" class="order-btn">Order the project</a>
+        </div>
+        <div class="mobile-menu">
+            <div class="logo">
+                <img src="../img/header/logo.png" alt="Logo">
+                <span>jefferson*</span>
+            </div>
+            <div class="mobile-menu-toggle">
+                <img src="../img/header/hamburger.svg" alt="Logo">
+            </div>
+        </div>
+    </div>
 </header>
+
+<div class="mobile-menu-modal">
+    <div class="container">
+        <div class="mobile-menu-modal_inner">
+            <div class="mobile-close-menu">
+                <img src="../img/header/close.svg" alt="Close Menu">
+            </div>
+            <div class="mobile-menu-nav">
+                <a href="#about-me">About me</a>
+                <a href="#benefits">Benefits</a>
+                <a href="#projects">Projects</a>
+                <a href="#faq">FAQ</a>
+            </div>
+            <a href="#work-together" class="order-btn">Order the project</a>
+        </div>
+    </div>
+</div>
 
     <div class="hero-title-wrapper">
       <h1 class="hero-title">
