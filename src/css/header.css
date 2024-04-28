@@ -88,3 +88,153 @@
     color: #fafafa;
   }
 }
+/* ========== MOBILE STYLES ========== */
+.header {
+  padding-top: 32px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  z-index: 2;
+}
+
+.header .logo {
+  display: flex;
+}
+
+.header .logo img {
+  width: 80px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.header .logo span {
+  color: #fff;
+}
+
+.mobile-menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.desktop-menu {
+  display: none;
+}
+
+.mobile-menu-toggle {
+  display: block;
+}
+
+.mobile-menu-modal {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/background/hero-bg-mobile@2x.png);
+  background-position: initial;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 3;
+  overflow-y: auto;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .25s ease-in-out, visibility .25s ease-in-out;
+}
+
+.mobile-menu-modal .container {
+  height: 100%;
+}
+
+.mobile-menu-modal_inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 0;
+  height: 100%;
+}
+
+.mobile-close-menu {
+  margin-left: auto;
+}
+
+.mobile-close-menu img {
+  margin-left: auto;
+}
+
+.mobile-menu-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.mobile-menu-nav a {
+  color: #fff;
+  text-decoration: underline;
+  text-align: center;
+  flex: 1;
+}
+
+.menu-toggle {
+  text-decoration: underline;
+  cursor: pointer;
+  user-select: none;
+}
+
+.order-btn {
+  width: 170px;
+  height: 55px;
+  background-color: #ED3B44;
+  padding: 18px 24px;
+  border-radius: 60px;
+  color: #fff;
+  text-align: center;
+}
+
+/* ========== /MOBILE STYLES ========== */
+
+/* ========== DESKTOP STYLES ========== */
+@media screen and (min-width: 768px) {
+
+  .mobile-menu,
+  .mobile-menu-modal {
+    display: none;
+  }
+
+  .desktop-menu {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .menu-container {
+    margin-top: 10px;
+  }
+
+  .dropdown-menu {
+    display: flex;
+    gap: 5px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-53%);
+    width: auto;
+    padding: 10px;
+    text-align: center;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .25s ease-in-out, visibility .25s ease-in-out;
+  }
+
+  .dropdown-menu a {
+    color: #fff;
+  }
+}
+
+.active {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity .25s ease-in-out, visibility .25s ease-in-out;
+}
