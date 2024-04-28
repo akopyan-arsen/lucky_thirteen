@@ -15,58 +15,60 @@
     <script type="module" crossorigin src="/lucky_thirteen/commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="/lucky_thirteen/assets/vendor-6dcf4018.js">
     <link rel="stylesheet" href="/lucky_thirteen/assets/vendor-aff52511.css">
-    <link rel="stylesheet" href="/lucky_thirteen/assets/index-e95d26ac.css">
+    <link rel="stylesheet" href="/lucky_thirteen/assets/index-fc48cd21.css">
   </head>
   <body>
     <main>
       <section class="section hero">
   <div class="container wrapper">
     <header class="header">
-    <div class="container">
-        <div class="desktop-menu">
-            <div class="logo">
-                <img src="../img/header/logo.png" alt="Logo">
-                <span>jefferson*</span>
-            </div>
-            <div class="menu-container">
-                <a class="menu-toggle">Menu</a>
-                <div class="dropdown-menu">
-                    <a href="#about-me">About me</a>
-                    <a href="#benefits">Benefits</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#faq">FAQ</a>
-                </div>
-            </div>
-            <a href="#work-together" class="order-btn">Order the project</a>
-        </div>
-        <div class="mobile-menu">
-            <div class="logo">
-                <img src="../img/header/logo.png" alt="Logo">
-                <span>jefferson*</span>
-            </div>
-            <div class="mobile-menu-toggle">
-                <img src="../img/header/hamburger.svg" alt="Logo">
-            </div>
-        </div>
-    </div>
-</header>
+  <ul class="nav">
+    <li class="logo">
+      <a href="./index.html" class="header-logo">
+        <img
+          class="logo-img"
+          srcset="/lucky_thirteen/assets/logo-725dc0db.png 1x, /lucky_thirteen/assets/logo@2x-45c929a9.png 2x"
+          src="./img/hero/girl1-mob@1x.png"
+          alt="logo"
+          width="80"
+          height="80"
+        />
 
-<div class="mobile-menu-modal">
-    <div class="container">
-        <div class="mobile-menu-modal_inner">
-            <div class="mobile-close-menu">
-                <img src="../img/header/close.svg" alt="Close Menu">
-            </div>
-            <div class="mobile-menu-nav">
-                <a href="#about-me">About me</a>
-                <a href="#benefits">Benefits</a>
-                <a href="#projects">Projects</a>
-                <a href="#faq">FAQ</a>
-            </div>
-            <a href="#work-together" class="order-btn">Order the project</a>
+        <svg class="logo-text">
+          <use href="/lucky_thirteen/assets/icons-2234978e.svg#icon-jefferson"></use>
+        </svg>
+      </a>
+    </li>
+    <li>
+      <div class="accordion-menu-container">
+        <div class="ac-menu">
+          <button type="button" class="menu">Menu</button>
+
+          <div class="ac-menu-panel">
+            <a href="#about-me" class="ac-menu-text">About</a>
+            <a href="#benefits" class="ac-menu-text">Benefits</a>
+            <a href="#projects" class="ac-menu-text">Projects</a>
+            <a href="#faq" class="ac-menu-text">FAQ</a>
+          </div>
         </div>
-    </div>
-</div>
+      </div>
+    </li>
+
+    <li>
+      <button
+        class="burger-btn"
+        type="button"
+        aria-label="Open menu button"
+        onclick="openModal()"
+      >
+        <svg class="burger-btn-icon" width="28" height="28">
+          <use href="/lucky_thirteen/assets/icons-2234978e.svg#icon-burger"></use>
+        </svg>
+      </button>
+      <a href="#work-together" class="order-btn">Order the project</a>
+    </li>
+  </ul>
+</header>
 
     <div class="hero-title-wrapper">
       <h1 class="hero-title">
@@ -120,7 +122,7 @@
   </div>
 </section>
 
-      <section class="section about-me">
+      <section class="section about-me" id="about-me">
   <div class="container">
     <h2 class="visually-hidden">About Me</h2>
     <div class="about-me-main-info">
@@ -502,7 +504,34 @@
   <div class="container"></div>
 </footer>
 
-    <div class="modal"></div>
+    <div class="mob-menu" id="myModal">
+  <div class="menu">
+    <button
+      class="menu-btn"
+      type="button"
+      aria-label="Close menu"
+      onclick="closeModal()"
+    >
+      <svg class="icon-x" width="28" height="28">
+        <use href="/lucky_thirteen/assets/icons-2234978e.svg#icon-x"></use>
+      </svg>
+    </button>
+    <ul class="menu-list">
+      <li class="menu-item">
+        <a class="menu-link active" href="#about-me">About me</a>
+      </li>
+      <li class="menu-item">
+        <a class="menu-link" href="#benefits">Benefits</a>
+      </li>
+      <li class="menu-item">
+        <a class="menu-link" href="#projects">Projects</a>
+      </li>
+      <li class="menu-item">
+        <a class="menu-link" href="#faq">FAQ</a>
+      </li>
+    </ul>
+  </div>
+</div>
 
     
   </body>
