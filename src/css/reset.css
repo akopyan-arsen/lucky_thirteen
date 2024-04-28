@@ -10,6 +10,7 @@ body {
   font-family: 'Inter Tight', sans-serif;
   color: #fafafa;
   background-color: #1c1d20;
+  margin: 0;
 }
 
 h1,
@@ -83,6 +84,7 @@ input {
     padding: 0 32px;
   }
 }
+
 @media screen and (min-width: 1440px) {
   .section {
     margin-bottom: 164px;
