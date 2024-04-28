@@ -1,25 +1,46 @@
 <header class="header">
     <div class="container">
-        <a href="index.html" class="header__logo"><img src="/src/img/Header/logo_mobile.png" alt="logo" /><span></span></a>
-        <div class="header__menu menu">
-            <button type="button" class="menu__btn open">Menu</button>
-            <nav class="menu__body">
-                <ul class="menu__list">
-                    <li class="menu__item">
-                        <a href="#" class="menu__link">About me</a>
-                    </li>
-                    <li class="menu__item">
-                        <a href="#" class="menu__link">Benefits</a>
-                    </li>
-                    <li class="menu__item">
-                        <a href="#" class="menu__link">Projects</a>
-                    </li>
-                    <li class="menu__item"><a href="#" class="menu__link">FAQ</a></li>
-                </ul>
-                <button type="button" class="header__order-mobile btn">Order the project</button>
-            </nav>
+        <div class="desktop-menu">
+            <div class="logo">
+                <img src="../img/header/logo.png" alt="Logo">
+                <span>jefferson*</span>
+            </div>
+            <div class="menu-container">
+                <a class="menu-toggle">Menu</a>
+                <div class="dropdown-menu">
+                    <a href="#about-me">About me</a>
+                    <a href="#benefits">Benefits</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#faq">FAQ</a>
+                </div>
+            </div>
+            <a href="#work-together" class="order-btn">Order the project</a>
         </div>
-        <button type="button" class="header__order btn">Order the project</button>
-
+        <div class="mobile-menu">
+            <div class="logo">
+                <img src="../img/header/logo.png" alt="Logo">
+                <span>jefferson*</span>
+            </div>
+            <div class="mobile-menu-toggle">
+                <img src="../img/header/hamburger.svg" alt="Logo">
+            </div>
+        </div>
     </div>
 </header>
+
+<div class="mobile-menu-modal">
+    <div class="container">
+        <div class="mobile-menu-modal_inner">
+            <div class="mobile-close-menu">
+                <img src="../img/header/close.svg" alt="Close Menu">
+            </div>
+            <div class="mobile-menu-nav">
+                <a href="#about-me">About me</a>
+                <a href="#benefits">Benefits</a>
+                <a href="#projects">Projects</a>
+                <a href="#faq">FAQ</a>
+            </div>
+            <a href="#work-together" class="order-btn">Order the project</a>
+        </div>
+    </div>
+</div>

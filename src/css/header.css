@@ -1,208 +1,146 @@
 .header {
     padding-top: 32px;
-    padding-bottom: 32px;
-    min-height: 144px;
-    background-color: transparent;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 55;
+    background-color: transparent;
+    z-index: 2;
 }
 
-.header .container {
+.header .logo {
+    display: flex;
+}
+
+.header .logo img {
+    width: 80px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.header .logo span {
+    color: #fff;
+}
+
+.mobile-menu {
     display: flex;
     justify-content: space-between;
-    gap: 10px;
 }
 
-.header__logo {
-    max-width: 172px;
-
-    img {
-        max-width: 100%;
-    }
-}
-
-.btn {
-    border-radius: 60px;
-    padding: 18px 50px;
-    background-color: var(--button-text);
-    font-weight: 500;
-    font-size: 16px;
-    letter-spacing: -0.02em;
-    color: var(--main-text);
-    transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #e0373f;
-}
-
-.header__order {
-    align-self: flex-start;
+.desktop-menu {
     display: none;
 }
 
-.container {}
-
-/* Menu style */
-.header__menu {
-    position: relative;
-    align-self: start;
+.mobile-menu-toggle {
+    display: block;
 }
 
-.menu,
-.menu__link {
-    font-weight: 500;
-    font-size: 16px;
-    letter-spacing: -0.02em;
-    color: var(--main-text);
+.mobile-menu-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/background/hero-bg-mobile@2x.png);
+    background-position: initial;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 3;
+    overflow-y: auto;
+    animation: slideDown 0.3s ease forwards;
 }
 
-.menu__btn {
-    /* background-color: transparent;
-  text-decoration: underline;
-  padding: 10px 11px;
-  flex: 0 1 67px; */
-    font-size: 0;
-    width: 28px;
-    height: 28px;
-    position: relative;
-    background-color: transparent;
-    z-index: 5;
-}
-
-.menu__btn::before,
-.menu__btn::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 32px;
-    background-color: var(--main-text);
-    height: 2px;
-    width: 24px;
-    transition: all 0.3s ease;
-}
-
-.menu__btn::before {
-    /* transform: translate(10px, -50%); */
-    top: 10px;
-}
-
-.menu__btn::after {
-    /* transform: translate(10px, -50%); */
-    bottom: 10px;
-}
-
-.open.menu__btn::before {
-    transform: translate(-50%, -50%) rotate(45deg);
-    top: calc(50% - 1px);
-}
-
-.open.menu__btn::after {
-    transform: translate(-50%, -50%) rotate(-45deg);
-    bottom: calc(50% - 1px);
-}
-
-.menu__list {}
-
-.menu__body {}
-
-.menu__item {}
-
-.menu__link {}
-
-/* Medias */
-@media screen and (min-width: 320px) {
-    .header__logo {
-        position: relative;
-        z-index: 3;
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        /* Start modal above the screen */
+        opacity: 0;
     }
 
-    .menu__body {
-        position: fixed;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        overflow: auto;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        padding: 164px 16px 30px 16px;
-        gap: 10px;
-    }
-
-    .menu__body::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: url('../img/bg_menu.png') 0 0 / cover no-repeat;
-        z-index: 1;
-    }
-
-    .menu__list {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        justify-content: center;
-        position: relative;
-        z-index: 2;
-        flex: 1 1 auto;
-    }
-
-    .header__order-mobile {
-        position: relative;
-        z-index: 2;
-        padding: 18px 24px;
+    to {
+        transform: translateY(0);
+        /* Slide modal to the top of the screen */
+        opacity: 1;
     }
 }
 
+.mobile-menu-modal .container {
+    height: 100%;
+}
+
+.mobile-menu-modal_inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 0;
+    height: 100%;
+}
+
+.mobile-close-menu {
+    margin-left: auto;
+}
+
+.mobile-close-menu img {
+    margin-left: auto;
+}
+
+.mobile-menu-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.mobile-menu-nav a {
+    color: #fff;
+    text-decoration: underline;
+    text-align: center;
+    flex: 1;
+}
+
+.order-btn {
+    width: 170px;
+    height: 55px;
+    background-color: #ED3B44;
+    padding: 18px 24px;
+    border-radius: 60px;
+    color: #fff;
+    text-align: center;
+}
+
+/* ========== /MOBILE STYLES ========== */
+/* ========== DESKTOP STYLES ========== */
 @media screen and (min-width: 768px) {
 
-    /* .section {
-    margin-bottom: 96px;
-  }
+    .mobile-menu,
+    .mobile-menu-modal {
+        display: none;
+    }
 
-  .container {
-    max-width: 768px;
-    padding: 0 32px;
-  } */
-    .menu__btn {
-        background-color: transparent;
+    .desktop-menu {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .menu-toggle {
         text-decoration: underline;
-        padding: 10px 11px;
-        flex: 0 1 67px;
+        cursor: pointer;
     }
 
-    .menu__list {
+    .dropdown-menu {
+        display: none;
         position: absolute;
-        top: 100%;
-        left: 0;
-        width: 67px;
-        transform: translateY(8px);
-        opacity: 0;
-        visibility: hidden;
+        /* top: 100%; */
+        left: 50%;
+        transform: translateX(-53%);
+        width: auto;
+        padding: 10px;
+        text-align: center;
+        flex-direction: column;
     }
 
-    .open.menu__list {
-        opacity: 1;
-        visibility: visible;
+    .dropdown-menu a {
+        color: #fff;
     }
-}
-
-@media screen and (min-width: 1440px) {
-    /* .section {
-    margin-bottom: 164px;
-  }
-
-  .container {
-    max-width: 1440px;
-  } */
 }
