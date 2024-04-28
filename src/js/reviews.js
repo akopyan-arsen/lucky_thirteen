@@ -1,6 +1,9 @@
 import Swiper from 'swiper/bundle';
 import 'swiper/css';
 
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
+
 const swiper = new Swiper('.swiper', {
   direction: 'horizontal',
   speed: 400,
@@ -77,13 +80,21 @@ async function fetchData() {
 }
 
 fetchData()
-  .then(data => createMarkup(data))
+  .then(data => {
+    createMarkup(data);
+    onSlideChange();
+  })
   .catch(error => {
     console.log(error);
+    iziToast.error({
+      title: 'Opps',
+      message: 'No content found',
+      position: 'topLeft',
+    });
+
     textError.hidden = false;
     reviewsContainer.hidden = true;
     navigationBtn.disabled = true;
-    onSlideChange();
   });
 
 function onSlideChange() {
