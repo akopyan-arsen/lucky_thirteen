@@ -1,0 +1,165 @@
+.reviews-title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.4);
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+.left-arrow,
+.right-arrow {
+  height: 68px;
+  width: 68px;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+
+  border: solid 1px rgba(250, 250, 250, 0.6);
+}
+
+.button-icon {
+  fill: #fff;
+  width: 32px;
+  height: 32px;
+  stroke: #fff;
+}
+
+.reviews-list {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.swiper-slide {
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 20px;
+  padding: 32px 24px;
+  width: 344px;
+  height: 302px;
+}
+#card {
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 20px;
+  padding: 32px 24px;
+  width: 344px;
+  height: 302px;
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+/* .button-icon {
+  fill: #ffffff;
+  width: 32px;
+  height: 32px;
+} */
+
+.item-name {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  margin-bottom: 8px;
+}
+.item-comment {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.6);
+}
+
+.review-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 32px;
+  border-radius: 10px;
+}
+
+.left-arrow,
+.right-arrow {
+  height: 68px;
+  width: 68px;
+  border-radius: 50%;
+  /* background-color: #1c1d20; */
+  border: solid 1px rgba(250, 250, 250, 0.6);
+}
+
+.navigation-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.swiper {
+  margin-bottom: 32px;
+}
+
+@media screen and (min-width: 768px) {
+  .reviews-title {
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    color: rgba(250, 250, 250, 0.4);
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+
+  .reviews-list {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .item-name {
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    color: #fafafa;
+    margin-bottom: 8px;
+  }
+  .item-comment {
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    color: rgba(250, 250, 250, 0.6);
+  }
+
+  .review-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 32px;
+  }
+
+  .navigation-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  #card {
+    width: 332px;
+    height: 302px;
+  }
+
+  .review-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 32px;
+  }
+}
