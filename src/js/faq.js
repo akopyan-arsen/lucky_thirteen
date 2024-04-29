@@ -5,4 +5,4 @@ const buildFaq = () => {
   initAccordion('.faq-accordion-second.accordion-container');
 };
 
-export default buildFaq;
+buildFaq();
