@@ -8,10 +8,10 @@
   text-align: left;
 }
 
-.projects-swiper .swiper-wrapper {
+/* .projects-swiper .swiper-wrapper {
   min-width: 320px;
   height: 868px;
-}
+} */
 
 .projects-swiper .swiper-slide {
   background-color: transparent;
@@ -102,7 +102,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .swiper-wrapper {
+  .projects-swiper .swiper-wrapper {
     min-width: 704px;
     height: 1191px;
   }
@@ -139,7 +139,7 @@
 }
 
 @media screen and (min-width: 1440px) {
-  .swiper-wrapper {
+  .projects-swiper .swiper-wrapper {
     min-width: 1376px;
     height: 625px;
   }
