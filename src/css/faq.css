@@ -31,6 +31,12 @@
 .faq-inner-container .ac .ac-panel .ac-text {
   padding: 0;
   padding-top: 16px;
+  color: rgba(250, 250, 250, 0.6);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5; /* 150% */
+  letter-spacing: -0.02em;
 }
 
 .faq-inner-container .ac .ac-trigger {
@@ -66,7 +72,6 @@
 }
 
 @media screen and (min-width: 768px) {
-
   .faq-inner-container .ac .ac-trigger {
     max-width: 704px;
     padding-top: 32px;
@@ -107,7 +112,6 @@
 }
 
 @media screen and (min-width: 1440px) {
-
   #faq-tab {
     padding-bottom: 32px;
     border-bottom: none;
