@@ -1,5 +1,6 @@
 .faq-title {
   padding-bottom: 32px;
+
   border-bottom: 1px solid rgba(250, 250, 250, 0.2);
   color: rgba(250, 250, 250, 0.4);
   font-size: 16px;
@@ -40,7 +41,8 @@
 }
 
 .faq-inner-container .ac .ac-trigger {
-  color: inherit;
+  color: #fafafa;
+  font-family: 'Inter Tight';
   font-size: 20px;
   font-weight: 600;
   line-height: 1.5;
@@ -52,10 +54,14 @@
 
 .faq-inner-container .ac .ac-header .ac-trigger::after {
   top: 30px;
-  right: -20%;
+  right: -19.8%;
   content: url('../img/about_me/css_icons/arrow_down.svg');
   width: 10px;
   height: 10px;
+}
+
+#ac-trigger-special::after {
+  top: 21px;
 }
 
 .faq-inner-container .ac.is-active .ac-header .ac-trigger::after {
@@ -82,15 +88,19 @@
   }
 
   .faq-inner-container .ac .ac-header .ac-trigger::after {
-    top: 25px;
+    top: 29.8px;
     right: 3.8%;
     content: url('../img/about_me/css_icons/arrow_down.svg');
     width: 10px;
     height: 10px;
   }
 
+  #ac-trigger-special::after {
+    top: 29.8px;
+  }
+
   #ac-last-trigger::after {
-    top: 25px;
+    top: 35px;
     right: -39.7%;
     width: 10px;
     height: 10px;
@@ -144,7 +154,7 @@
   }
 
   .faq-inner-container .ac .ac-header .ac-trigger::after {
-    top: 25px;
+    top: 29, 8px;
     right: 4%;
     content: url('../img/about_me/css_icons/arrow_down.svg');
     width: 10px;
@@ -152,7 +162,7 @@
   }
 
   #ac-last-trigger::after {
-    top: 25px;
+    top: 29.2px;
     right: -29.7%;
     width: 10px;
     height: 10px;
