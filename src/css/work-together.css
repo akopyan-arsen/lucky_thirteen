@@ -12,17 +12,7 @@ a {
   background-size: 50% 100%;
   background-repeat: no-repeat;
 }
-@media only screen and (min-width: 768px) {
-  .work-together {
-  }
-}
 
-.footer-container {
-}
-@media only screen and (min-width: 768px) {
-  .footer-container {
-  }
-}
 .footer-title {
   padding: 32px 0;
   display: flex;
@@ -85,12 +75,6 @@ a {
     /* max-width: 245px; */
     flex-wrap: nowrap;
     gap: 32px;
-  }
-}
-@media only screen and (min-width: 1440px) {
-  .input-container {
-    /* max-width: 390px; */
-    /* gap: 32px; */
   }
 }
 
