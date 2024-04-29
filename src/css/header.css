@@ -1,7 +1,19 @@
 .nav {
   display: flex;
   justify-content: space-between;
-  position: relative;
+  width: 100%;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  padding: 32px 16px;
+  transform: translateX(-50%);
+  width: calc(100% - 32px);
+  max-width: 375px;
+  background-color: transparent;
+  z-index: 2;
 }
 
 .header-logo {
@@ -30,10 +42,14 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .header {
+    padding: 32px 32px;
+    width: calc(100% - 64px);
+    max-width: 768px;
+  }
   .menu {
     display: flex;
     align-items: flex-start;
-    justify-content: center;
     background-color: transparent;
     padding: 10px;
     padding-bottom: 16px;
@@ -79,12 +95,17 @@
   .ac-menu-panel.active {
     opacity: 1;
     visibility: visible;
-    transition-delay: 0s;
+    transition-delay: 0.2s;
   }
   .ac-menu-panel:not(.active) {
     margin-top: -9999px;
   }
   .ac-menu-text {
     color: #fafafa;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .header {
+    max-width: 1440px;
   }
 }
