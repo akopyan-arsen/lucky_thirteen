@@ -4,7 +4,7 @@ import 'swiper/css';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.section.reviews .swiper', {
   direction: 'horizontal',
   speed: 400,
   spaceBetween: 16,
@@ -34,9 +34,13 @@ const swiper = new Swiper('.swiper', {
   allowTouchMove: true,
 });
 
-const reviewsContainer = document.querySelector('.swiper-wrapper');
-const textError = document.querySelector('.no-content-warning');
-const navigationBtn = document.querySelector('.nav');
+const reviewsContainer = document.querySelector(
+  '.section.reviews .swiper-wrapper'
+);
+const textError = document.querySelector(
+  '.section.reviews .no-content-warning'
+);
+const navigationBtn = document.querySelector('.section.reviews .nav');
 
 fetchData();
 

@@ -74,8 +74,12 @@
   height: 100%;
 }
 
-.left-arrow,
-.right-arrow {
+.left-arrow.nav,
+.right-arrow.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   height: 68px;
   width: 68px;
   border-radius: 50%;
