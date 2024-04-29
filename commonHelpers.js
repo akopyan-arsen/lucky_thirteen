@@ -8,7 +8,7 @@ import{A as q,S as v,i as y,a as k,b as A}from"./assets/vendor-7071a5c4.js";(fun
       <div class="modal">
       <button class="modal-btn" type="button" aria-label="Modal close button">
           <svg class="modal-icon-x" width="22px" height="22">
-            <use href="../img/icons.svg#icon-x"></use>
+            <use href="./img/icons.svg#icon-x"></use>
           </svg>
         </button>
 
