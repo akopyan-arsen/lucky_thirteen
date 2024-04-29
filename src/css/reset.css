@@ -59,6 +59,7 @@ input {
   max-width: 375px;
   margin: 0 auto;
   padding: 0 16px;
+  position: relative;
 }
 
 .visually-hidden {
@@ -84,6 +85,7 @@ input {
     padding: 0 32px;
   }
 }
+
 @media screen and (min-width: 1440px) {
   .section {
     margin-bottom: 164px;

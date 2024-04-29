@@ -17,6 +17,7 @@
 
 .hero-title-wrapper {
   display: flex;
+  margin-top: 280px;
 }
 
 .hero-title {
@@ -27,16 +28,22 @@
   line-height: 1;
   letter-spacing: -0.03em;
   text-transform: uppercase;
-  white-space: pre-line;
 }
 
 .contact-list {
   display: flex;
   gap: 4px;
   justify-content: center;
+  align-items: center;
 }
 
 .contact-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,24 +52,19 @@
   padding: 10px 12px;
   width: 37px;
   height: 37px;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  transition: border 300ms ease-in-out;
 }
 
-.contact-item:hover {
+.contact-link:hover {
   border-color: #fafafa;
 }
 
 .mail {
   width: 178px;
-}
-
-.contact-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: -0.02em;
-  color: #fafafa;
 }
 
 @media screen and (min-resolution: 192dpi) and (max-width: 767px),
@@ -88,24 +90,24 @@
     max-width: 632px;
     font-size: 90px;
   }
+  .hero-title-wrapper {
+    margin-top: 300px;
+  }
 
   .contact-list {
     gap: 8px;
     justify-content: end;
   }
 
-  .contact-item {
+  .contact-link {
     padding: 18px 20px;
     width: 55px;
     height: 55px;
+    font-size: 16px;
   }
 
   .mail {
     width: 223px;
-  }
-
-  .contact-link {
-    font-size: 16px;
   }
 
   @media screen and (min-resolution: 192dpi) and (min-width: 768px),
@@ -145,16 +147,13 @@
   }
 }
 /* ========== /DESKTOP STYLES ========== */
-@media only screen and (max-width: 375px) {
-  .contact-item {
+@media only screen and (max-width: 374px) {
+  .contact-link {
     width: calc(7vw + 10px);
     height: calc(7vw + 10px);
-  }
-
-  .contact-link {
     font-size: calc(0.8vw + 8px);
   }
   .mail {
-    width: 178px;
+    width: fit-content;
   }
 }

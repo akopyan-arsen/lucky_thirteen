@@ -33,4 +33,4 @@ const buildAboutMe = () => {
   });
 };
 
-export default buildAboutMe;
+buildAboutMe();
