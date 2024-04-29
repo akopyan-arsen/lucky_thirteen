@@ -15,12 +15,9 @@
   justify-content: space-between;
 }
 
-.top {
-  display: flex;
-}
-
 .hero-title-wrapper {
   display: flex;
+  margin-top: 280px;
 }
 
 .hero-title {
@@ -31,7 +28,6 @@
   line-height: 1;
   letter-spacing: -0.03em;
   text-transform: uppercase;
-  white-space: pre-line;
 }
 
 .contact-list {
@@ -93,6 +89,9 @@
   .hero-title {
     max-width: 632px;
     font-size: 90px;
+  }
+  .hero-title-wrapper {
+    margin-top: 300px;
   }
 
   .contact-list {

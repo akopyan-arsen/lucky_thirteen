@@ -1,3 +1,3 @@
-import buildAboutMe from './js/about-me';
-
-buildAboutMe();
+import './js/header';
+import '/js/about-me';
+import './js/covers';
