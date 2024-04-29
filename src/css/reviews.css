@@ -66,8 +66,12 @@
   height: 100%;
 }
 
+
 .navigation-box .left-arrow,
 .navigation-box .right-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 68px;
   width: 68px;
   border-radius: 50%;
