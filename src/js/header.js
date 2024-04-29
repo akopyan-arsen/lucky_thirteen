@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const menuPanel = document.querySelector('.ac-menu-panel');
   const openButton = document.querySelector('.burger-btn');
   const closeButton = document.querySelector('.menu-btn');
+  const orderButton = document.querySelector('.mob-order-btn');
 
   const scroll = link => {
     const targetId = link.getAttribute('href').substring(1);
@@ -33,6 +34,10 @@ document.addEventListener('DOMContentLoaded', function () {
     closeModal();
   });
 
+  orderButton.addEventListener('click', function () {
+    closeModal();
+  });
+
   menuButton.addEventListener('click', function () {
     menuPanel.classList.toggle('active');
   });
@@ -45,10 +50,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Обробник події для якірних посилань
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (event) {
-      event.preventDefault(); // Скасування стандартної дії
+      event.preventDefault();
       const targetId = this.getAttribute('href').substring(1);
       const targetElement = document.getElementById(targetId);
       if (targetElement) {
@@ -60,20 +64,9 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
+  const mobmenuLinks = document.querySelectorAll('.menu-list');
+
+  mobmenuLinks.forEach(function (link) {
+    link.addEventListener('click', closeModal);
+  });
 });
-
-const mobmenuLinks = document.querySelectorAll('.menu-list');
-function closeMobileMenu() {
-  document.getElementById('myModal').classList.remove('is-open');
-}
-
-mobmenuLinks.forEach(function (link) {
-  link.addEventListener('click', closeMobileMenu);
-});
-
-window.onclick = function (event) {
-  const modal = document.getElementById('myModal');
-  if (event.target === modal) {
-    document.getElementById('myModal').classList.remove('is-open');
-  }
-};
