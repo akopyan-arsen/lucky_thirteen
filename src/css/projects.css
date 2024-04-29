@@ -8,12 +8,12 @@
   text-align: left;
 }
 
-.swiper-wrapper {
+.projects-swiper .swiper-wrapper {
   min-width: 320px;
   height: 868px;
 }
 
-.swiper-wrapper .swiper-slide {
+.projects-swiper .swiper-slide {
   background-color: transparent;
 }
 
@@ -79,15 +79,15 @@
   width: 311px;
 }
 
-.swiper-buttons {
+.projects-swiper .swiper-buttons {
   margin-top: 32px;
   display: flex;
   justify-content: center;
   gap: 12px;
 }
 
-.swiper-buttons .swiper-button-prev,
-.swiper-buttons .swiper-button-next {
+.projects-swiper .swiper-button-prev,
+.projects-swiper .swiper-button-next {
   position: unset;
   width: 52px;
   height: 52px;
@@ -133,7 +133,7 @@
     width: 614px;
   }
 
-  .swiper-buttons {
+  .projects-swiper .swiper-buttons {
     margin-top: 64px;
   }
 }
