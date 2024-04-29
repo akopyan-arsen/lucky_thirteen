@@ -180,3 +180,15 @@
     border-bottom: none;
   }
 }
+@media screen and (max-width: 374px) {
+  .faq-inner-container .ac .ac-header .ac-trigger::after {
+    top: 20px;
+    left: 85%;
+  }
+
+  .faq-inner-container .ac .ac-trigger {
+    font-size: 4vw;
+    padding-right: 60px;
+    max-width: 100%;
+  }
+}

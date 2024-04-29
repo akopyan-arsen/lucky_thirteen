@@ -214,11 +214,7 @@ a {
 }
 @media only screen and (min-width: 768px) {
   .footer-link {
-    display: flex;
     padding: 18px 32px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
   }
 }
 .basicLightbox {
@@ -310,4 +306,9 @@ a {
 .modal-icon-x {
   stroke: #fafafa;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (max-width: 374px) {
+  .footer-link {
+    font-size: 3.5vw;
+  }
 }
