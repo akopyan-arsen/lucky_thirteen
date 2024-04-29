@@ -4,7 +4,6 @@ function projectsSwipe() {
     // console.log("Run");
     Swiper('.projects-swiper .swiper', {
         direction: 'horizontal',
-        loop: true,
         slidesPerView: 1,
         spaceBetween: 25,
         navigation: {
