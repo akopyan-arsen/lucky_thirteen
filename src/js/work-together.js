@@ -21,21 +21,6 @@ async function handleSubmit(event) {
   const emailValue = event.target.elements.email.value;
   const commentsValue = event.target.elements.comments.value;
 
-  console.log(commentsValue);
-
-  // if (!commentsValue) {
-  //   iziToast.show({
-  //     message:
-  //       'Please ented a comment!',
-  //     color: 'orange',
-  //     position: 'topRight',
-  //   });
-  //   return;
-  // }
-
-  // gallery.innerHTML = '';
-  // loader.classList.remove('is-hidden');
-
   updateCommnetValue(commentsValue);
   updateEmailValue(emailValue);
 
@@ -43,7 +28,6 @@ async function handleSubmit(event) {
     const {
       data: { message, title },
     } = await fetchData(`${BASE_URL}/requests`, params);
-    console.log(title);
 
     const instance = basicLightbox.create(
       `<div class="backdrop">
