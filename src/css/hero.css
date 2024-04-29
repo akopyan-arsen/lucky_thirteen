@@ -1,0 +1,159 @@
+/* ========== MOBILE STYLES ========== */
+.hero {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  background-image: url(../img/background/hero-bg-mobile.png);
+  background-position: initial;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.wrapper {
+  height: 812px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero-title-wrapper {
+  display: flex;
+  margin-top: 280px;
+}
+
+.hero-title {
+  max-width: 343px;
+  display: flex;
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+.contact-list {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 60px;
+  padding: 10px 12px;
+  width: 37px;
+  height: 37px;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  transition: border 300ms ease-in-out;
+}
+
+.contact-link:hover {
+  border-color: #fafafa;
+}
+
+.mail {
+  width: 178px;
+}
+
+@media screen and (min-resolution: 192dpi) and (max-width: 767px),
+  screen and (min-resolution: 2dppx) and (max-width: 767px),
+  screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
+  .hero {
+    background-image: url(../img/background/hero-bg-mobile@2x.png);
+  }
+}
+/* ========== /MOBILE STYLES ========== */
+
+/* ========== TABLET STYLES ========== */
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: url(../img/background/hero-bg-tablet.png);
+  }
+
+  .wrapper {
+    height: 1024px;
+  }
+
+  .hero-title {
+    max-width: 632px;
+    font-size: 90px;
+  }
+  .hero-title-wrapper {
+    margin-top: 300px;
+  }
+
+  .contact-list {
+    gap: 8px;
+    justify-content: end;
+  }
+
+  .contact-link {
+    padding: 18px 20px;
+    width: 55px;
+    height: 55px;
+    font-size: 16px;
+  }
+
+  .mail {
+    width: 223px;
+  }
+
+  @media screen and (min-resolution: 192dpi) and (min-width: 768px),
+    screen and (min-resolution: 2dppx) and (min-width: 768px),
+    screen and (min-device-pixel-ratio: 2) and (min-width: 768px) {
+    .hero {
+      background-image: url(../img/background/hero-bg-tablet@2x.png);
+    }
+  }
+}
+/* ========== /TABLET STYLES ========== */
+
+/* ========== DESKTOP STYLES ========== */
+@media screen and (min-width: 1440px) {
+  .hero {
+    background-image: url(../img/background/hero-bg-desktop.png);
+  }
+
+  .wrapper {
+    height: 900px;
+  }
+
+  .hero-title-wrapper {
+    justify-content: space-around;
+  }
+
+  .hero-title {
+    max-width: 1084px;
+  }
+
+  @media screen and (min-resolution: 192dpi) and (min-width: 1440px),
+    screen and (min-resolution: 2dppx) and (min-width: 1440px),
+    screen and (min-device-pixel-ratio: 2) and (min-width: 1440px) {
+    .hero {
+      background-image: url(../img/background/hero-bg-desktop@2x.png);
+    }
+  }
+}
+/* ========== /DESKTOP STYLES ========== */
+@media only screen and (max-width: 374px) {
+  .contact-link {
+    width: calc(7vw + 10px);
+    height: calc(7vw + 10px);
+    font-size: calc(0.8vw + 8px);
+  }
+  .mail {
+    width: fit-content;
+  }
+}
