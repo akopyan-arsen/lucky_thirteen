@@ -9,11 +9,6 @@
   letter-spacing: -0.02em;
 }
 
-/* .faq-tab {
-  padding-top: 20px;
-  padding-bottom: 20px;
-} */
-
 .faq-tab-top-container {
   display: flex;
 }
@@ -71,10 +66,6 @@
 }
 
 @media screen and (min-width: 768px) {
-  /* .faq-tab {
-    padding-top: 32px;
-    padding-bottom: 24px;
-  } */
 
   .faq-inner-container .ac .ac-trigger {
     max-width: 704px;
@@ -116,10 +107,6 @@
 }
 
 @media screen and (min-width: 1440px) {
-  /* .faq-tab {
-    padding-top: 32px;
-    padding-bottom: 26px;
-  } */
 
   #faq-tab {
     padding-bottom: 32px;
@@ -133,14 +120,6 @@
   .faq-tab-help-container-right {
     margin-left: 32px;
   }
-
-  /* .faq-tab-right {
-    padding-left: 32px;
-  } */
-
-  /* .faq-tab-left {
-    padding-right: 32px;
-  } */
 
   .faq-inner-container {
     display: flex;
