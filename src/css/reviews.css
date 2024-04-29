@@ -85,9 +85,8 @@
 }
 
 #arrow:disabled {
-  /* border: 1px solid rgba(250, 250, 250, 0.156);
-  stroke: rgba(250, 250, 250, 0.156); */
-  cursor: not-allowed;
+  border: 1px solid rgba(250, 250, 250, 0.156);
+  stroke: rgba(250, 250, 250, 0.156);
 }
 
 @media screen and (min-width: 768px) {

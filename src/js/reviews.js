@@ -32,7 +32,6 @@ const swiper = new Swiper('.section.reviews .swiper', {
     },
   },
   allowTouchMove: true,
-  slideActiveClass: false,
 });
 
 const reviewsContainer = document.querySelector(
