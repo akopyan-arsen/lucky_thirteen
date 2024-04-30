@@ -1,6 +1,7 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 import * as basicLightbox from 'basiclightbox';
+import closex from '../img/icons.svg';
 
 import {
   fetchData,
@@ -8,7 +9,7 @@ import {
   params,
   updateCommnetValue,
   updateEmailValue,
-} from './api';
+} from './Libraries/axios';
 
 const searchForm = document.querySelector('.feedback-form');
 // const sendBtn = document.querySelector('.feedback-form[buttom]');
@@ -34,7 +35,7 @@ async function handleSubmit(event) {
       <div class="modal">
       <button class="modal-btn" type="button" aria-label="Modal close button">
           <svg class="modal-icon-x" width="22" height="22">
-            <use href="./img/icons.svg#icon-x"></use>
+            <use href="${closex}#icon-x"></use>
           </svg>
         </button>
 
