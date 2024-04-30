@@ -143,7 +143,9 @@
     margin-bottom: 223px;
   }
 
-  #swiper-slide-container {
+  #swiper-slide-container-1,
+  #swiper-slide-container-2,
+  #swiper-slide-container-3 {
     display: flex;
   }
 
