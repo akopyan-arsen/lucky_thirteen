@@ -277,7 +277,7 @@ a {
   height: 24px; */
   stroke: #fafafa;
   border-radius: 20px;
-
+  cursor: pointer;
   background-color: #1c1d20;
   stroke-width: 2px;
 
