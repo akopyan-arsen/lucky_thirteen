@@ -1,4 +1,4 @@
-# lucky-thirteen
+# 🍀Lucky Thirteen🍀
 
 The goal of the project is to create a prototype portfolio that will give the student the opportunity to easily and effectively present his achievements, projects and skills to his future employer.
 
