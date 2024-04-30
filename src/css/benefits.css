@@ -28,10 +28,14 @@
   background: #ed3b44;
 }
 
-.section-title {
+.section-title-benefits {
   color: #fafafa;
   margin-top: 64px;
   margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
 }
 
 .benefits-text {
@@ -63,6 +67,21 @@
   stroke-width: 2;
 }
 
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.benefits-card:hover .benefits-icon-svg {
+  animation: zoom 2s linear infinite;
+}
 /* media -------------------*/
 @media screen and (min-width: 768px) {
   .benefits-card {
@@ -93,7 +112,6 @@
 
 .button-benefits {
   color: #fafafa;
-  font-family: 'Inter Tight';
   font-size: 16px;
   font-style: normal;
   font-weight: 500;

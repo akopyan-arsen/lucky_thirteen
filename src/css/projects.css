@@ -62,7 +62,6 @@
 }
 
 .slide-image-container {
-  /* position: relative; */
   display: flex;
   justify-content: center;
   background-color: #242527;

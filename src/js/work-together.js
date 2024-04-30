@@ -96,3 +96,12 @@ emailInput.addEventListener('blur', function () {
   emailError.textContent = '';
   footerEmail.style.borderBottom = '1px solid rgba(250, 250, 250, 0.2)';
 });
+
+const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+scrollToTopBtn.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+});
