@@ -15,7 +15,7 @@
     <script type="module" crossorigin src="/lucky_thirteen/commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="/lucky_thirteen/assets/vendor-7071a5c4.js">
     <link rel="stylesheet" href="/lucky_thirteen/assets/vendor-f064895a.css">
-    <link rel="stylesheet" href="/lucky_thirteen/assets/index-bdf52b42.css">
+    <link rel="stylesheet" href="/lucky_thirteen/assets/index-065c87df.css">
   </head>
   <body>
     <header class="header">
@@ -900,12 +900,13 @@
           class="footer-email"
           type="email"
           name="email"
+          id="email"
           placeholder="clients@gmail.com"
           maxlength="64"
           pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
           required
         />
-
+        <span id="email-error"></span>
         <input
           class="footer-comments"
           type="text"
