@@ -97,8 +97,7 @@
 }
 
 #email-error {
-  position: absolute;
-  bottom: 4px;
+  padding-top: 4px;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.29;
@@ -106,6 +105,15 @@
 }
 
 @media only screen and (min-width: 768px) {
+  #email-error {
+    position: absolute;
+    bottom: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.29;
+    letter-spacing: -0.02em;
+  }
+
   .footer-email,
   .footer-comments {
     min-width: 245px;
