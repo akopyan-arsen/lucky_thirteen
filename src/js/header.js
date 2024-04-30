@@ -69,4 +69,9 @@ document.addEventListener('DOMContentLoaded', function () {
   mobmenuLinks.forEach(function (link) {
     link.addEventListener('click', closeModal);
   });
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      closeModal();
+    }
+  });
 });
