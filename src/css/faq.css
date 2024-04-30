@@ -156,7 +156,7 @@
   }
 
   .faq-inner-container .ac .ac-trigger::after {
-    top: 29, 8px;
+    top: 29.8px;
     right: 4%;
     content: url('../img/about_me/css_icons/arrow_down.svg');
     width: 10px;
