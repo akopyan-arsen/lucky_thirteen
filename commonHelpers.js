@@ -7,7 +7,7 @@ import{A as q,S as v,i as b,a as A,b as V}from"./assets/vendor-7071a5c4.js";(fun
     `).join("");f.insertAdjacentHTML("beforeend",a)}}async function L(){try{const t=await(await fetch("https://portfolio-js.b.goit.study/api/reviews")).json();return E=t.length,t}catch(e){console.log(e)}}L().then(e=>{O(e),T()}).catch(e=>{console.log(e),b.error({title:"Opps",message:"No content found",position:"topLeft"}),w.hidden=!1,f.hidden=!0,u.disabled=!0});function T(){j===E-1?u.classList.add("disabled"):u.classList.remove("disabled")}const $="https://portfolio-js.b.goit.study/api";let g={email:"test@gmail.com",comment:"User's comment"};async function D(e,t={}){return await A.post(e,t)}function z(e){g.email=e}function N(e){g.comment=e}const S=document.querySelector(".feedback-form");S.addEventListener("submit",F);async function F(e){e.preventDefault();const t=e.target.elements.email.value,a=e.target.elements.comments.value;N(a),z(t);try{const{data:{message:s,title:o}}=await D(`${$}/requests`,g);V.create(`<div class="backdrop">
       <div class="modal">
       <button class="modal-btn" type="button" aria-label="Modal close button">
-          <svg class="modal-icon-x" width="22px" height="22">
+          <svg class="modal-icon-x" width="22" height="22">
             <use href="./img/icons.svg#icon-x"></use>
           </svg>
         </button>
