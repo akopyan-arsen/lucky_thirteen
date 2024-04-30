@@ -76,3 +76,23 @@ async function handleSubmit(event) {
   } finally {
   }
 }
+const emailInput = document.getElementById('email');
+const emailError = document.getElementById('email-error');
+const footerEmail = document.querySelector('.footer-email');
+
+emailInput.addEventListener('input', function () {
+  if (!this.checkValidity()) {
+    emailError.textContent = 'Invalid email, try again';
+    emailError.style.color = '#E74A3B';
+    footerEmail.style.borderBottom = '1px solid #E74A3B';
+  } else {
+    emailError.textContent = 'Success!';
+    emailError.style.color = '#3CBC81';
+    footerEmail.style.borderBottom = '1px solid #3CBC81';
+  }
+});
+
+emailInput.addEventListener('blur', function () {
+  emailError.textContent = '';
+  footerEmail.style.borderBottom = '1px solid rgba(250, 250, 250, 0.2)';
+});
