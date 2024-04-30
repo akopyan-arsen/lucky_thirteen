@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const openButton = document.querySelector('.burger-btn');
   const closeButton = document.querySelector('.menu-btn');
   const orderButton = document.querySelector('.mob-order-btn');
+  const body = document.querySelector('body');
 
   const scroll = link => {
     const targetId = link.getAttribute('href').substring(1);
@@ -20,10 +21,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function openModal() {
     document.getElementById('myModal').classList.add('is-open');
+    body.style.overflow = 'hidden';
   }
 
   function closeModal() {
     document.getElementById('myModal').classList.remove('is-open');
+    body.style.overflow = '';
   }
 
   openButton.addEventListener('click', function () {
