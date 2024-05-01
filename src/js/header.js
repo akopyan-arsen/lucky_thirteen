@@ -1,3 +1,11 @@
+import backgroundImage from '../img/background/hero-bg-desktop.png';
+import backgroundImage2 from '../img/background/hero-bg-desktop-2.png';
+import backgroundImage3 from '../img/background/hero-bg-desktop-3.png';
+import backgroundImage4 from '../img/background/hero-bg-desktop-4.png';
+import backgroundImage5 from '../img/background/hero-bg-desktop-5.png';
+import backgroundImage6 from '../img/background/hero-bg-desktop-6.png';
+
+const hero = document.querySelector('.hero');
 document.addEventListener('DOMContentLoaded', function () {
   const menuButton = document.querySelector('.menu');
   const menuPanel = document.querySelector('.ac-menu-panel');
@@ -5,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const closeButton = document.querySelector('.menu-btn');
   const orderButton = document.querySelector('.mob-order-btn');
   const body = document.querySelector('body');
+
 
   const scroll = link => {
     const targetId = link.getAttribute('href').substring(1);
@@ -78,3 +87,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+let currentIndex = 0;
+
+document.getElementById('changeBackgroundBtn').addEventListener('click', changeBackground);
+
+function changeBackground() {
+const backgrounds = [backgroundImage2, backgroundImage3, backgroundImage4, backgroundImage5, backgroundImage6, backgroundImage];
+const selectedBackground = backgrounds[currentIndex];
+    hero.style.backgroundImage = `url(${selectedBackground})`;
+    currentIndex = (currentIndex + 1) % backgrounds.length;
+}
