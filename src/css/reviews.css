@@ -91,7 +91,7 @@
 
 #arrow-1:hover,
 #arrow-2:hover {
-  border: 1px solid 1px solid rgba(250, 250, 250, 0.156);
+  border: 1px solid rgba(250, 250, 250, 0.156);
   stroke: #fafafa;
 }
 
