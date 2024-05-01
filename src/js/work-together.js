@@ -10,7 +10,7 @@ import {
   updateCommnetValue,
   updateEmailValue,
 } from './Libraries/axios';
-
+const body = document.querySelector('body');
 const searchForm = document.querySelector('.feedback-form');
 // const sendBtn = document.querySelector('.feedback-form[buttom]');
 
@@ -18,7 +18,7 @@ searchForm.addEventListener('submit', handleSubmit);
 
 async function handleSubmit(event) {
   event.preventDefault();
-
+  body.style.overflow = 'hidden';
   const emailValue = event.target.elements.email.value;
   const commentsValue = event.target.elements.comments.value;
 
@@ -46,17 +46,19 @@ async function handleSubmit(event) {
 
       {
         onShow: instance => {
-          instance.element().querySelector('.modal-btn').onclick =
-            instance.close;
-
+          instance.element().querySelector('.modal-btn').onclick = () => {
+            instance.close();
+            body.style.overflow = '';
+          };
           instance.element().addEventListener('click', function (event) {
             if (event.target.classList.contains('backdrop')) {
+              body.style.overflow = '';
               instance.close();
             }
           });
-
           window.addEventListener('keydown', function (event) {
             if (event.key === 'Escape') {
+              body.style.overflow = '';
               instance.close();
             }
           });
