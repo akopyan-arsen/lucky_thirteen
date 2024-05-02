@@ -32,36 +32,34 @@ async function handleSubmit(event) {
 
     const instance = basicLightbox.create(
       `<div class="backdrop">
-      <div class="modal">
-      <button class="modal-btn" type="button" aria-label="Modal close button">
-          <svg class="modal-icon-x" width="22" height="22">
-            <use href="${closex}#icon-x"></use>
-          </svg>
-        </button>
-
-      <h3 class="modal-title">${title}</h1>
-      <p class="modal-desc">${message}</p>
-      </div>
+        <div class="modal">
+          <button class="modal-btn" type="button" aria-label="Modal close button">
+            <svg class="modal-icon-x" width="22" height="22">
+              <use href="${closex}#icon-x"></use>
+            </svg>
+          </button>
+          <h3 class="modal-title">${title}</h3>
+          <p class="modal-desc">${message}</p>
+        </div>
       </div>`,
-
       {
         onShow: instance => {
           instance.element().querySelector('.modal-btn').onclick = () => {
             instance.close();
-            body.style.overflow = '';
           };
           instance.element().addEventListener('click', function (event) {
             if (event.target.classList.contains('backdrop')) {
-              body.style.overflow = '';
               instance.close();
             }
           });
           window.addEventListener('keydown', function (event) {
             if (event.key === 'Escape') {
-              body.style.overflow = '';
               instance.close();
             }
           });
+        },
+        onClose: instance => {
+          body.style.overflow = '';
         },
       }
     );
@@ -78,6 +76,7 @@ async function handleSubmit(event) {
   } finally {
   }
 }
+
 const emailInput = document.getElementById('email');
 const emailError = document.getElementById('email-error');
 const footerEmail = document.querySelector('.footer-email');
