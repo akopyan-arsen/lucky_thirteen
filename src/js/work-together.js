@@ -71,7 +71,7 @@ async function handleSubmit(event) {
   } catch (error) {
     // alert(error);
     iziToast.show({
-      message: 'Please ented a valid data!',
+      message: 'Please entered a valid data!',
       color: 'orange',
       position: 'topRight',
     });
