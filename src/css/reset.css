@@ -96,3 +96,24 @@ input {
     max-width: 1440px;
   }
 }
+/* Стиль для автозаповнення */
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  background-color: transparent;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Стиль для тексту в першому рядку автозаповненого поля */
+input:-webkit-autofill::first-line,
+textarea:-webkit-autofill::first-line,
+select:-webkit-autofill::first-line {
+  color: rgba(250, 250, 250, 0.6);
+}
+
+/* Стиль для тексту в автозаповненому полі при наведенні */
+input:-webkit-autofill:hover,
+textarea:-webkit-autofill:hover,
+select:-webkit-autofill:hover {
+  color: rgba(250, 250, 250, 0.6);
+}

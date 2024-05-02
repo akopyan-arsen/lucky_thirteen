@@ -1,6 +1,7 @@
 .button-benefits:hover,
 .button-benefits:focus {
   background-color: #ed3b44;
+  animation: zoom 2s linear infinite;
 }
 
 .benefits-list {
@@ -78,7 +79,9 @@
     transform: scale(1);
   }
 }
-
+.benefits-card {
+  position: relative;
+}
 .benefits-card:hover .benefits-icon-svg {
   animation: zoom 2s linear infinite;
 }
@@ -121,4 +124,54 @@
   border: 1px solid rgba(250, 250, 250, 0.2);
   background-color: #1c1d20;
   padding: 18px 36px;
+}
+
+.square-benefits:hover::before,
+.square-benefits:hover::after,
+.square-benefits:focus::before,
+.square-benefits:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(
+    45deg,
+    rgba(241, 196, 15, 1),
+    rgba(69, 167, 63, 1),
+    rgba(57, 172, 113, 1),
+    rgba(49, 178, 179, 1),
+    rgba(75, 72, 181, 1),
+    rgba(147, 88, 179, 1),
+    rgba(177, 84, 167, 1),
+    rgba(174, 68, 84, 1),
+    rgba(177, 84, 167, 1),
+    rgba(147, 88, 179, 1),
+    rgba(75, 72, 181, 1),
+    rgba(49, 178, 179, 1),
+    rgba(57, 172, 113, 1),
+    rgba(69, 167, 63, 1),
+    rgba(241, 196, 15, 1)
+  );
+  background-size: 400%;
+  width: 100%;
+  height: 270px;
+  border-radius: 20px;
+  z-index: -1;
+  animation: anim 20s linear infinite;
+}
+
+@keyframes anim {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 300% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.square-benefits:hover:after {
+  filter: blur(30px);
 }
